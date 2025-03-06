@@ -4,7 +4,7 @@
  * @author QuestionUser
  * @version 1.0.5
  * @authorId 145905246
- * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.theme.css
+ * @updateUrl https://github.com/QuestionUser/BetterDiscord/blob/main/Discord2.theme.css
  * 
  * @var text				transparencycolor_s		"Transparency Color: [default] = 0, 0, 0"		0, 0, 0
  * @var range				transparencyalpha_s		"Transparency Alpha: [default] = 0.15"			[0.15, 0, 1, 0.05]
@@ -38,7 +38,7 @@
 
 /* To change stuff like the colors, transparency and background image, change the variables inside the root {}, do NOT change the @import url() */
 
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.css);
+@import url(https://github.com/QuestionUser/BetterDiscord/blob/main/Discord2.theme.css);
 
 :root {
 	--transparencycolor:		0, 0, 0;			/* default: 0, 0, 0															*/
