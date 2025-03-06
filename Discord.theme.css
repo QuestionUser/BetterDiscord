@@ -1,21 +1,63 @@
-  /**
- * @name Discord+
- * @author PlusInsta
- * @authorId 309931975102300160
- * @authorLink https://plusinsta.xyz
- * @version 3.2.1
- * @description A sleek, customizable Discord theme.
- * @donate https://ko-fi.com/plusinsta
- * @website https://plusinsta.github.io/discord-plus
- * @source https://github.com/PlusInsta/discord-plus
- * @updateUrl https://plusinsta.github.io/discord-plus/DiscordPlus.theme.css
- * @invite 2Jwh2nS
-*/
-@import url(https://plusinsta.github.io/discord-plus/src/DiscordPlus-source.theme.css);
+/**
+ * @name BasicBackground_Forked
+ * @description Allows you to use a Background Image without greatly altering the basic Layout of Discord
+ * @author DevilBro
+ * @version 1.0.5
+ * @authorId 278543574059057154
+ * @invite Jx3TjNS
+ * @donate https://www.paypal.me/MircoWittrien
+ * @patreon https://www.patreon.com/MircoWittrien
+ * @website https://mwittrien.github.io/
+ * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/BasicBackground/
+ * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.theme.css
+ * 
+ * @var text				transparencycolor_s		"Transparency Color: [default] = 0, 0, 0"		0, 0, 0
+ * @var range				transparencyalpha_s		"Transparency Alpha: [default] = 0.15"			[0.15, 0, 1, 0.05]
+ * @var range				guildchanneltransparency_s	"Guilds/Channels: [default] = 0.15"			[0.15, 0, 1, 0.05]
+ * @var text				font_s				"General Font"						"gg sans", "Noto Sans"
+ * @var text				background_s			"Background: Can be an Image/Color/Gradient"		url(https://i.imgur.com/dSNGvTR.jpeg)
+ * @var select				backgroundposition_s		"Background Position"					["center*", "top", "right", "bottom", "left"]
+ * @var select				backgroundsize_s		"Background Size"					["cover*", "contain", "auto"]
+ * @var range				backgroundblur_s		"Background Blur"					[0, 0, 100, 1]
+ * @var text				popout_s			"Popups BG: Can be an Image/Color/Gradient"		var(--background)
+ * @var select				popoutposition_s		"Popups BG Position"					["center*", "top", "right", "bottom", "left"]
+ * @var select				popoutsize_s			"Popups BG Size"					["cover*", "contain", "auto"]
+ * @var range				popoutblur_s			"Popups BG Blur"					[0, 0, 100, 1]
+ * @var text				backdrop_s			"Backdrop BG: Can be an Image/Color/Gradient"		rgba(0, 0, 0, 0.)
+ * @var select				backdropposition_s		"Backdrop BG Position"					["center*", "top", "right", "bottom", "left"]
+ * @var select				backdropsize_s			"Backdrop BG Size"					["cover*", "contain", "auto"]
+ */
 
-.theme-dark {
-/* Backdrop image which is shown behind the app. Can also be an HTML color. Falls back to accent color if invalid.
-   To use an image from your computer, upload it somewhere first, copy its link, then paste it below. */
-  --dplus-backdrop: url(https://i.imgur.com/dSNGvTR.jpeg);
+/* To change stuff like the colors, transparency and background image, change the variables inside the root {}, do NOT change the @import url() */
 
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BasicBackground/BasicBackground.css);
+
+:root {
+	--transparencycolor:		0, 0, 0;			/* default: 0, 0, 0															*/
+	--transparencyalpha:		0.15;				/* default: 0.15				(general darkness of the app)								*/
+	--messagetransparency:		0.5;				/* default: 0.5					(additional shadows behind messages, set to 0 to remove boxes)				*/
+	--guildchanneltransparency:	0.15;				/* default: 0.15				(additional darkness for guild/channel list)						*/
+	--chatinputtransparency:	0.0;				/* default: 0.0					(additional darkness for chat input container)						*/
+	--memberlisttransparency:	0.0;				/* default: 0.0					(additional darkness for member list)							*/
+	
+	--settingsicons:		0;				/* Use Settings Icons in User Settings: 1 = yes, 0 = no											*/
+	--font:				"gg sans", "Noto Sans";		/* font used in most places														*/
+	--textshadow:			transparent;			/* default: transparent				(textshadow for text ontop of accentcolor nodes, ONLY accepts a color, no px)		*/
+	
+	--background:			url(https://i.imgur.com/dSNGvTR.jpeg);	/* general background image					*/
+	--backgroundposition:		center;				/* default: center				(position of background - values: [center/top/right/bottom/left])			*/
+	--backgroundsize:		cover;				/* default: cover				(sizefit of background - values: [cover/contain/auto])					*/
+	--backgroundblur:		0;				/* default: 0					(blur in px, only works when --background is set to an image)				*/
+	
+	--popout:			var(--background);		/* default: var(--background)			(change to use another background/color for modals/popouts)				*/
+	--popoutposition:		var(--backgroundposition);	/* default: center				(position of popout - values: [center/top/right/bottom/left])				*/
+	--popoutsize:			var(--backgroundsize);		/* default: cover				(sizefit of popout - values: [cover/contain/auto])					*/
+	--popoutblur:			var(--backgroundblur);		/* default: 0					(blur in px, only works when --popout is set to an image)				*/
+	
+	--backdrop:			rgba(0, 0, 0, 0.85);		/* default: rgba(0, 0, 0, 0.85)			(change to use another background/color for backdrops)					*/
+	--backdropposition:		center;				/* default: center				(position of backdrop - values: [center/top/right/bottom/left])				*/
+	--backdropsize:			cover;				/* default: cover				(sizefit of backdrop - values: [cover/contain/auto])					*/
+	--backdropblur:			0;				/* default: 0					(blur in px, only works when --backdrop is set to an image)				*/
+	
+	--version1_0_5:			none;				/* DO NOT CHANGE THIS VARIABLE , USED TO HIDE UPDATE NOTICE										*/
 }
